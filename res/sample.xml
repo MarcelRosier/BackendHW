@@ -1,0 +1,208 @@
+<People>
+    <Person>
+        <id>1</id>
+        <Name>Kieron Pollard</Name>
+        <Age>33</Age>
+        <Country>Trinidad and Tobago</Country>
+        <Car>
+            <Color>Green</Color>
+            <Type>Hatchback</Type>
+            <NumberPlate>TAC7133</NumberPlate>
+            <Insurance>
+                <Company>RV24</Company>
+                <Type>Vollkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Silver</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>TBA3413</NumberPlate>
+            <Insurance>
+                <Company>AXA</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+    </Person>
+    <Person>
+        <id>2</id>
+        <Name>Alastair Cook</Name>
+        <Age>35</Age>
+        <Country>United Kingdom</Country>
+        <Car>
+            <Color>White</Color>
+            <Type>Sports</Type>
+            <NumberPlate>PK07LVD</NumberPlate>
+            <Insurance>
+                <Company>Helvetia Versicherungen</Company>
+                <Type>Haftpflicht</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Black</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>MY02ZRO</NumberPlate>
+        </Car>
+    </Person>
+    <Person>
+        <id>3</id>
+        <Name>Andrew Flintoff</Name>
+        <Age>25</Age>
+        <Country>United Kingdom</Country>
+        <Car>
+            <Color>Orange</Color>
+            <Type>Hatchback</Type>
+            <NumberPlate>BAT6754</NumberPlate>
+            <Insurance>
+                <Company>Sigma</Company>
+                <Type>Vollkasko</Type>
+            </Insurance>
+        </Car>
+    </Person>
+    <Person>
+        <id>4</id>
+        <Name>David Warner</Name>
+        <Age>50</Age>
+        <Country>Australia</Country>
+        <Car>
+            <Color>Blue</Color>
+            <Type>SUV</Type>
+            <NumberPlate>DAV5678</NumberPlate>
+            <Insurance>
+                <Company>Allianz</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Black</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>YUV5623</NumberPlate>
+            <Insurance>
+                <Company>AXA</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Green</Color>
+            <Type>Compact</Type>
+            <NumberPlate>TRE8196</NumberPlate>
+        </Car>
+    </Person>
+    <Person>
+        <id>5</id>
+        <Name>Allan Donald</Name>
+        <Age>64</Age>
+        <Country>South Africa</Country>
+        <Car>
+            <Color>Pink</Color>
+            <Type>Hatchback</Type>
+            <NumberPlate>IUY9088</NumberPlate>
+            <Insurance>
+                <Company>RV24</Company>
+                <Type>Haftpflicht</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Gold</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>CBD5755</NumberPlate>
+            <Insurance>
+                <Company>RV24</Company>
+                <Type>Haftpflicht</Type>
+            </Insurance>
+        </Car>
+    </Person>
+    <Person>
+        <id>6</id>
+        <Name>Shaun Pollock</Name>
+        <Age>78</Age>
+        <Country>South Africa</Country>
+        <Car>
+            <Color>Yellow</Color>
+            <Type>Hatchback</Type>
+            <NumberPlate>YTE6743</NumberPlate>
+        </Car>
+    </Person>
+    <Person>
+        <id>7</id>
+        <Name>Kane Williamson</Name>
+        <Age>27</Age>
+        <Country>New Zealand</Country>
+        <Car>
+            <Color>Black</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>ONF5643</NumberPlate>
+            <Insurance>
+                <Company>Allianz</Company>
+                <Type>Haftpflicht</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Silver</Color>
+            <Type>SUV</Type>
+            <NumberPlate>HYT1485</NumberPlate>
+            <Insurance>
+                <Company>AXA</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>White</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>HYT2495</NumberPlate>
+        </Car>
+    </Person>
+    <Person>
+        <id>8</id>
+        <Name>Baz Mccullum</Name>
+        <Age>55</Age>
+        <Country>New Zealand</Country>
+        <Car>
+            <Color>Yellow</Color>
+            <Type>SUV</Type>
+            <NumberPlate>BAZ6428</NumberPlate>
+            <Insurance>
+                <Company>AXA</Company>
+                <Type>Vollkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>White</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>BAZ0735</NumberPlate>
+            <Insurance>
+                <Company>AXA</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+    </Person>
+    <Person>
+        <id>9</id>
+        <Name>Adam Zampa</Name>
+        <Age>19</Age>
+        <Country>Australia</Country>
+        <Car>
+            <Color>Green</Color>
+            <Type>Compact</Type>
+            <NumberPlate>AZA4912</NumberPlate>
+            <Insurance>
+                <Company>Allianz</Company>
+                <Type>Teilkasko</Type>
+            </Insurance>
+        </Car>
+        <Car>
+            <Color>Grey</Color>
+            <Type>Sedan</Type>
+            <NumberPlate>AZA8126</NumberPlate>
+            <Insurance>
+                <Company>Allianz</Company>
+                <Type>Vollkasko</Type>
+            </Insurance>
+        </Car>
+    </Person>
+    <Person>
+        <id>10</id>
+        <Name>Marcus Stoinis</Name>
+        <Age>40</Age>
+        <Country>Australia</Country>
+    </Person>
+</People>

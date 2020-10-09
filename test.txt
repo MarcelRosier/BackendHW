@@ -1,0 +1,56 @@
+An old, too big to fail company has built its systems using legacy tech stacks long ago. Now they can export data only as XMLs.
+They've approached us for a solution to import those XMLs and provide some statistics from their data.
+
+You find the XML file attached along with this document.
+What we need:
+1. Develop a simple backend that can read the data from the XML file, consume it and create an internal representation of this data in any format you deem suitable. (Example: JSON)
+(do not use any databases). 
+2. Some data are always required more often than the others. Provide REST API for querying these data.
+    a. Given a number plate, get the car's details. (*required)
+        Rest API: http://localhost:<port>/car/<NumberPlate>
+        output : 
+        {
+            'color': 'green',
+            'type': 'Hatchback',
+        }
+    b. Given a person'd ID, get details of all their cars. (*required)
+        Rest API: http://localhost:<port>/person/<id>/car
+        output : 
+        [
+            {
+                'color': 'green',
+                'type': 'Hatchback',
+            },
+            {
+                'color': 'Silver',
+                'type': 'Sedan',
+            }
+        ]
+    c. Given a car color, get names of all persons having a car of that color. (Bonus)
+        Rest API: http://localhost:<port>/getPersonsByCar?color="green"
+        output : 
+        [
+           "Kieron Pollard",
+           "Alastair Cook"
+        ]
+    d. Given an age, get names of all the people who are older than that age. (Bonus)
+        Rest API: http://localhost:<port>/getPersonsOlderThan?age=25
+        output:
+        [
+           "Kieron Pollard",
+           "Alastair Cook"
+        ]
+    e. Get names of people who have "at least one of their cars insured". (Bonus)
+        Rest API: http://localhost:<port>/getPersonsWithInsurance
+        output:
+        [
+           "Kieron Pollard",
+           "Alastair Cook"
+        ]
+
+If you could complete the above tasks with ease, as a Bonus task, you could work on a very simple UI to display results of the above API.
+Feel free to use a tech stack of your choice, add additional fields to the data and make assumptions that you deem necessary. 
+Please explain some design considerations that are not very obvious in a readme file.
+Do not hesitate to contact nagarjun.ananth@visionhealth.gmbh if you need some clarity on the problem statement.
+
+Sample XML.
