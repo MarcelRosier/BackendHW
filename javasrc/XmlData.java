@@ -13,8 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
-public class XmlData{
+public class XmlData {
 
     private String filePath;
     private ArrayList<Person> people = new ArrayList<>();
@@ -23,13 +22,14 @@ public class XmlData{
      * used to answer numberPlate queries quicker
      */
     private HashMap<String, Car> numberPlate_to_carDetail;
+    private final int INDENT = 4;
 
     public XmlData(String filePath) {
         this.filePath = filePath;
         // parse data
         parseXmlFile();
         buildMap();
-        
+
     }
 
     /*
@@ -62,21 +62,20 @@ public class XmlData{
             if (person.getId() == id) {
                 switch (person.getCars().size()) {
                 case 0:
-                    sb.append("This person doesn't own a car");
-                    break;
+                    return "This person doesn't own a car";
                 case 1:
                     sb.append(person.getCars().get(0).getDetails());
                     break;
                 default:
-                    sb.append("[ <br>");
                     for (Car car : person.getCars()) {
-                        sb.append(car.getDetails() + ",<br>");
+                        sb.append(car.getDetails() + ",\n");
                     }
                     // delete the last ','
-                    sb.deleteCharAt(sb.length() - 5); // 5 since <br> has length 4
-                    sb.append("]");
+                    int index = sb.lastIndexOf(",");
+                    if (index != -1)
+                        sb.deleteCharAt(index);
                 }
-                return sb.toString();
+                return "[\n" + sb.toString().indent(INDENT) + "]";
             }
         }
         return sb.append("No Person matched the queried id").toString();
@@ -84,48 +83,47 @@ public class XmlData{
     }
 
     public String getPersonsByCarColor(String color) {
-        StringBuilder sb = new StringBuilder("[<br>");
-        boolean empty = true;
+        StringBuilder sb = new StringBuilder();
         for (Person person : people) {
             if (person.getCars().stream().anyMatch(car -> (car.getColor().equalsIgnoreCase(color)))) {
-                sb.append("\"" + person.getName() + "\"" + ",<br>");
-                empty = false;
+                sb.append("\"" + person.getName() + "\"" + ",\n");
             }
         }
         // delete the last ','
-        if (!empty)
-            sb.deleteCharAt(sb.length() - 5); // 5 since <br> has length 4
-        return sb.append("]").toString();
+        int index = sb.lastIndexOf(",");
+        if (index != -1)
+            sb.deleteCharAt(index);
+        else
+            return "no results found!";
+        return "[\n" + sb.toString().indent(INDENT) + "]";
     }
 
     public String getPersonsOlderThan(int age) {
-        StringBuilder sb = new StringBuilder("[<br>");
-        boolean empty = true;
+        StringBuilder sb = new StringBuilder();
         for (Person person : people) {
             if (person.getAge() > age) {
-                sb.append("\"" + person.getName() + "\"" + ",<br>");
-                empty = false;
+                sb.append("\"" + person.getName() + "\"" + ",\n");
             }
         }
         // delete the last ','
-        if (!empty)
-            sb.deleteCharAt(sb.length() - 5); // 5 since <br> has length 4
-        return sb.append("]").toString();
+        int index = sb.lastIndexOf(",");
+        if (index != -1)
+            sb.deleteCharAt(index);
+        return "[\n" + sb.toString().indent(INDENT) + "]";
     }
 
     public String getPersonsWithInsurance() {
-        StringBuilder sb = new StringBuilder("[<br>");
-        boolean empty = true;
+        StringBuilder sb = new StringBuilder();
         for (Person person : people) {
             if (person.getCars().stream().anyMatch(car -> (car.getInsurance() != null))) {
-                sb.append("\"" + person.getName() + "\"" + ",<br>");
-                empty = false;
+                sb.append("\"" + person.getName() + "\"" + ",\n");
             }
         }
         // delete the last ','
-        if (!empty)
-            sb.deleteCharAt(sb.length() - 5); // 5 since <br> has length 4
-        return sb.append("]").toString();
+        int index = sb.lastIndexOf(",");
+        if (index != -1)
+            sb.deleteCharAt(index);
+        return "[\n" + sb.toString().indent(INDENT) + "]";
     }
 
     // --------------------------------------------------------------------------------------
@@ -289,7 +287,7 @@ public class XmlData{
         }
 
         public String getDetails() {
-            return "{ <br> 'color': '" + color + "',<br>'type': '" + type + "',<br>}";
+            return "{ \n" + ("'color': '" + color + "',\n'type': '" + type + "',").indent(INDENT) + "}";
         }
 
         @Override

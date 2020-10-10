@@ -1,4 +1,5 @@
 const express = require("express");
+const fs = require("fs");
 const app = express();
 const port = 8000;
 
@@ -9,6 +10,8 @@ const port = 8000;
 var java = require("java");
 java.classpath.push(".");
 var instance = java.newInstanceSync("javasrc.XmlData", "res/sample.xml");
+
+var htmlTemplate = fs.readFileSync("res/responseTemplate.html", "utf8");
 
 /*
  * Routing
@@ -25,9 +28,7 @@ app.get("/car/:numberPlate", (req, res) => {
     req.params.numberPlate,
     function(err, results) {
       if (err) console.log(err);
-      res.send(
-        `details for numberPlate: ${req.params.numberPlate}:\n\ <br> ${results}`
-      );
+      res.send(htmlTemplate.replace(/template/g, results));
     }
   );
 });
@@ -40,7 +41,8 @@ app.get("/person/:id/car", (req, res) => {
     parseInt(req.params.id),
     function(err, results) {
       if (err) console.log(err);
-      res.send(results);
+      res.send(htmlTemplate.replace(/template/g, results));
+      // res.send("<pre>" + results + "</pre>");
     }
   );
 });
@@ -52,7 +54,7 @@ app.get("/getPersonsByCar", (req, res) => {
     req.query.color.replace(/"/g, ""),
     function(err, results) {
       if (err) console.log(err);
-      res.send(results);
+      res.send(htmlTemplate.replace(/template/g, results));
     }
   );
 });
@@ -64,7 +66,7 @@ app.get("/getPersonsOlderThan", (req, res) => {
     parseInt(req.query.age),
     function(err, results) {
       if (err) console.log(err);
-      res.send(results);
+      res.send(htmlTemplate.replace(/template/g, results));
     }
   );
 });
@@ -72,7 +74,7 @@ app.get("/getPersonsOlderThan", (req, res) => {
 app.get("/getPersonsWithInsurance", (req, res) => {
   java.callMethod(instance, "getPersonsWithInsurance", function(err, results) {
     if (err) console.log(err);
-    res.send(results);
+    res.send(htmlTemplate.replace(/template/g, results));
   });
 });
 
