@@ -4,13 +4,16 @@ const app = express();
 const port = 8000;
 
 /*
-  setup the JVM
-*/
+ * setup the JVM
+ */
 
 var java = require("java");
 java.classpath.push(".");
 var instance = java.newInstanceSync("javasrc.XmlData", "res/sample.xml");
 
+/*
+ * read in the html template
+ */
 var htmlTemplate = fs.readFileSync("res/responseTemplate.html", "utf8");
 
 /*
