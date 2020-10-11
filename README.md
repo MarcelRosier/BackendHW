@@ -1,6 +1,6 @@
 # BackendHW
 
-## Technical Requierements
+## Technical Requirements
 - [Python 2.x](https://www.python.org/downloads/)
 - [nodejs](https://nodejs.dev/)
 - [java 12 (or newer)](https://www.oracle.com/de/java/technologies/javase-downloads.html)
@@ -20,7 +20,7 @@
    For further possible fixes check [here](https://www.npmjs.com/package/java)
 
 ## Usage
-Ensure that the java classes are compiled by either compiling them manually or using the *start.bat* script while beeing in the projects' root directory.
+Ensure that the java classes are compiled by either compiling them manually or running the *start.bat* script while beeing in the projects' root directory.
 The script will automatically start the server. In case you compiled manually start the server with
 ```
 node index.js
