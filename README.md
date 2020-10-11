@@ -7,6 +7,9 @@
 
 ## Setup
 1. Clone the repository 
+      ```
+      git clone https://github.com/MarcelRosier/BackendHW.git
+      ```
 2. Depending on your System you will probably have to perform a npm rebuild
       ```
       npm rebuild
@@ -14,9 +17,9 @@
    ### Troubleshoot
    - A common error is a wrong python version (must be 2.x).
    Check with 
-   ```
-   python --version
-   ```
+      ```
+      python --version
+      ```
    - You might also have to manually install the java-npm package:
       ```
       npm install java
