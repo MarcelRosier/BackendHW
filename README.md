@@ -2,8 +2,8 @@
 
 ## Technical Requirements
 - [Python 2.x](https://www.python.org/downloads/)
-- [nodejs](https://nodejs.dev/)
-- [java 12 (or newer)](https://www.oracle.com/de/java/technologies/javase-downloads.html)
+- [Nodejs](https://nodejs.dev/)
+- [Java 12 (or newer)](https://www.oracle.com/de/java/technologies/javase-downloads.html)
 
 ## Setup
 1. Clone the repository 
