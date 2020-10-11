@@ -20,7 +20,7 @@ var htmlTemplate = fs.readFileSync("res/responseTemplate.html", "utf8");
  * Routing
  */
 app.get("/", (req, res) => {
-  res.send("<a href='https://github.com/MarcelRosier/BackendHW'>Refer to the GitHub page to learn how to use this site</a>");
+  res.send("<a target='_blank' rel='noopener noreferrer' href='https://github.com/MarcelRosier/BackendHW'>Refer to the GitHub page to learn how to use this site</a>");
 });
 
 app.get("/car/:numberPlate", (req, res) => {
