@@ -1,26 +1,30 @@
 # BackendHW
 
-## Technical Requierements
+## Technical Requirements
 - [Python 2.x](https://www.python.org/downloads/)
 - [nodejs](https://nodejs.dev/)
 - [java 12 (or newer)](https://www.oracle.com/de/java/technologies/javase-downloads.html)
 
 ## Setup
 1. Clone the repository 
-2. Install the java - npm package:
+2. Depending on your System you will probably have to perform a npm rebuild
       ```
-      npm install java
+      npm rebuild
       ```
    ### Troubleshoot
-   A common error is a wrong python version (must be 2.x).
+   - A common error is a wrong python version (must be 2.x).
    Check with 
    ```
    python --version
    ```
-   For further possible fixes check [here](https://www.npmjs.com/package/java)
+   - You might also have to manually install the java-npm package:
+      ```
+      npm install java
+      ```
+   For further possible fixes concerning the java package check [here](https://www.npmjs.com/package/java)
 
 ## Usage
-Ensure that the java classes are compiled by either compiling them manually or using the *start.bat* script while beeing in the projects' root directory.
+Ensure that the java classes are compiled by either compiling them manually or running the *start.bat* script while beeing in the projects' root directory.
 The script will automatically start the server. In case you compiled manually start the server with
 ```
 node index.js
